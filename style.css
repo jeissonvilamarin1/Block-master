@@ -66,9 +66,7 @@ ul a:hover{
   max-width: 900px;
   margin: 2% auto;
   overflow: hidden;
-  box-shadow: 0 0 0 1px white, 0 10px 30px;
   position: relative;
-  
 }
 .slider {
   display: flex;

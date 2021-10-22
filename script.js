@@ -16,8 +16,8 @@ const getData = async(url) => {
     return results
 }
 
-const showData = async() =>{
-    let data = await getData()
+const showData = async(url) =>{
+    let data = await getData(url)
     data.forEach(element => {
         const {title, vote_average, poster_path} = element
         templateCard.querySelector('img').setAttribute('src', IMG_PATH + poster_path)
@@ -35,13 +35,16 @@ boton.addEventListener('click', async(e) =>{
     e.preventDefault()
     let texto = document.getElementById('search').value
     let data = await getData()
-    let busqueda = data.filter(movie => movie.title.toLowerCase() === texto.toLowerCase())
+    let busqueda = data.filter(movie => movie.title.toLowerCase() == texto.toLowerCase())
     busqueda.forEach(element => {
         const {title, vote_average, poster_path} = element
         templateCard.querySelector('img').setAttribute('src', IMG_PATH + poster_path)
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
     });
+    
     cards.innerHTML = ''
     cards.appendChild(fragment)
 })
+
+
