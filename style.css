@@ -24,6 +24,7 @@ body {
 }
 ul a{
     color: white;
+    text-decoration: none;
 }
 ul a:hover{
     color: #FED941;
@@ -118,24 +119,26 @@ ul.slider li:target {
   background-color: white;
 }
 
-
+h1{
+    color: white;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
 
 .cards {
-  width: 100%;
+  width: auto;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
   cursor: pointer;
 }
 .card-section {
   width: auto;
   display: flex;
-  flex-wrap: wrap;
 }
 .card {
-    flex-wrap: wrap;
   max-width: 250px;
   width: 200px;
   height: 250px;
@@ -147,7 +150,7 @@ ul.slider li:target {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .card:hover{
   width: 210px;
