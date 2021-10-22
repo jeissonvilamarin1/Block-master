@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Block Master</title>
+</head>
+<body>
+    <header>
+      <nav class="menu">
+        <ul class="logo">
+          <a href="#"
+            ><img
+              src="./images/camara-de-video.svg"
+              alt="logo peliculas para ti"
+          /></a>
+        </ul>
+        <ul class="home">
+          <a href="#">Todas</a>
+        </ul>
+        <ul class="register">
+          <a href="#" id="register-btn">Más valoradas</a>
+        </ul>
+        <ul class="register">
+          <a href="#" id="register-btn">Menos valoradas</a>
+        </ul>
+        <form id="form">
+            <input type="text" id="search" class="search" placeholder="Search" />
+            <button id="btnBuscar">Buscar</button>
+        </form>
+      </nav>
+    </header>
+
+    <div class="slider-container">
+      <ul class="slider" id="slider">
+        <li id="slide1" class="slider-section">
+          <img
+            src="./images/shang-chi.jpg"
+            alt="shang chi movie"
+            class="slider-img"
+          />
+        </li>
+        <li id="slide2" class="slider-section">
+          <img
+            src="./images/black-widow.jpg"
+            alt="black widow movie"
+            class="slider-img"
+          />
+        </li>
+        <li id="slide3" class="slider-section">
+          <img
+            src="./images/spiderman.jpg"
+            alt="spiderman movie"
+            class="slider-img"
+          />
+        </li>
+      </ul>
+      <br />
+      <div id="slider-btn-container">
+        <a class="slider-btn" href="#slide1"></a>
+        <a class="slider-btn" href="#slide2"></a>
+        <a class="slider-btn" href="#slide3"></a>
+      </div>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <template id="template-card">
+        <div class="card-section">
+            <div class="card" id="card">
+                <a><img src=${image} class="card-image" data-id=${id}></a>
+            </div>
+        </div>
+    </template>
+
+    <script src="./script.js"></script>
+</body>
+</html>
