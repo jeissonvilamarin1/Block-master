@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', showData)
 
 let boton = document.getElementById('btnBuscar')
 
-boton.addEventListener('click', async() =>{
+boton.addEventListener('click', async(e) =>{
+    e.preventDefault()
     let texto = document.getElementById('search').value
     let data = await getData()
     let busqueda = data.filter(movie => movie.title.toLowerCase() === texto.toLowerCase())
