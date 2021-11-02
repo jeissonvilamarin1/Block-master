@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -31,10 +30,10 @@ ul a:hover{
 }
 
 .logo {
-  width: 10%;
+  width: 30%;
 }
 .logo img {
-  width: 40px;
+  width: 100%;
   background-position: center;
   background-size: cover;
 }
@@ -45,7 +44,11 @@ ul a:hover{
 }
 .register {
   width: 40%;
-  text-align: start;
+  text-align: center;
+}
+.register a{
+  width: 100%;
+  font-family: 'Inter', sans-serif;
 }
 .search{
   width: 260px;
@@ -59,10 +62,12 @@ ul a:hover{
   background-color: #FED941;
   border: 1px solid #FED941;
 }
+
 /*slider*/
+
 .slider-container {
   width: 100%;
-  height: 400px;
+  height: 300px;
   max-width: 900px;
   margin: 2% auto;
   overflow: hidden;
@@ -71,7 +76,7 @@ ul a:hover{
 .slider {
   display: flex;
   width: 100%;
-  height: 400px;
+  height: 300px;
   position: relative;
 
 }
@@ -101,7 +106,7 @@ ul.slider li:target {
 .slider-img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -134,25 +139,62 @@ h1{
     font-weight: 700;
 }
 
+/*Cards*/
+
 .cards {
-  width: auto;
+  width: 100%;
   height: auto;
-  display: flex;
-  flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
+  grid-gap: 20px;
   margin-bottom: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
   cursor: pointer;
+  overflow-x: hidden;
+  margin-bottom: 160px;
+
 }
 .card-section {
-  width: auto;
   display: flex;
+  width: 200px;
+height: 300px;
 }
 .card {
-  max-width: 250px;
   width: auto;
   height: auto;
   overflow: hidden;
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+#vote{
+  padding-right: 8px;
+  text-align: end;
+  width: 100px;
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  top: 30%;
+  left: -10%;
+  border: 3px solid orange;
+  border-radius: 30px;
+  background: #000000;
+  opacity: 0.64;
+  box-sizing: border-box;
+  backdrop-filter: blur(130px)
+}
+#star{
+  position: absolute;
+  top: 32%;
+}
+.green{
+  color: green;
+}
+.orange{
+  color: orange;
+}
+.red{
+  color: red;
 }
 .card-image {
   display: block;
@@ -163,4 +205,160 @@ h1{
 .card:hover{
   transform: scale(1.05);
   box-shadow: 1px 1px 3px  #FED941;
+}
+
+/*Form*/
+
+.form-container{
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1em;
+}
+.form-container h2{
+  text-align: center;
+  margin-bottom: 1em;
+}
+#formulario label{
+  display: inline-block;
+  width: 20%;
+  margin-bottom: 1em;
+}
+#formulario input{
+  display: inline-block;
+  width: 78%;
+}
+.form-btn{
+  width: 100%;
+  margin-bottom: 0.5em;
+  background-color: black;
+  color: #FED941;
+  font-weight: 600;
+  border: 1px solid #FED941;
+  border-radius: 10px;
+}
+.form-btn:hover{
+  background-color: #FED941;
+  color: black;
+  font-weight: 600;
+  border: 1px solid #FED941;
+  border-radius: 10px;
+}
+.campoId{
+  display: none;
+}
+
+/* Movie description */
+
+
+#details-page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(12, 14, 22, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#card-detail {
+  width: 90%;
+  height: auto;
+  position: relative;
+  background: #0C0E16;
+  opacity: 0.9;
+  color: white;
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+
+#card-body{
+  overflow: auto;
+  width: 40rem;
+  height: 27rem;
+  padding: 0 4.4rem;
+  position: relative;
+  top: 2rem;
+  margin: auto;
+}
+
+#card-img{
+  left: 0px;
+  padding-left: 50px;
+  width: 300px;
+  height: 200px;
+  margin: auto auto;
+  transform: matrix(0.71, -0.41, 1.22, 0.71, 0, 0);
+}
+#card-title{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+   margin-bottom: 20px;
+}
+#card-description{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+#card-categories{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #A7A9BE;
+  margin-bottom: 20px;
+}
+#close-detail {
+    position: absolute;
+    text-decoration: none;
+    font-size: 1.5rem;
+    right: 20px;
+    padding-right: 0.5em;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#close-detail:active{
+    background: grey;
+    color: white;
+}
+.show{
+  display: none;
+}
+
+
+/* Loading */
+.loading{
+  transform: translateX(-50%);
+  left: 50%;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+}
+.loading.show{
+  opacity: 1;
+}
+.circle{
+  transition: opacity .3s ease-in;
+  border: 10px solid #FED941; 
+  border-top: 10px solid #0C0E16; 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translateX(-100px);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg)}
+  100% { transform: rotate(360deg)}
 }

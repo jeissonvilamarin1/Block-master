@@ -7,24 +7,27 @@
     <link rel="stylesheet" href="./style.css">
     <title>Block Master</title>
 </head>
-<body>
+<body id="body">
     <header>
       <nav class="menu">
         <ul class="logo">
-          <a href="#"
+          <a href="index.html"
             ><img
-              src="./images/camara-de-video.svg"
+              src="./images/Block master.png"
               alt="logo peliculas para ti"
           /></a>
         </ul>
-        <ul class="home">
+        <ul class="register">
           <a href="index.html">Todas</a>
         </ul>
         <ul class="register">
-          <a href="" id="register-btn">Más valoradas</a>
+          <a href="" id="register-btn">Más <br>valoradas</a>
         </ul>
         <ul class="register">
-          <a href="#" id="register-btn">Menos valoradas</a>
+          <a href="#" id="register-btn">Menos <br>valoradas</a>
+        </ul>
+        <ul class="register">
+          <a href="form.html" id="register-btn">Regístrate</a>
         </ul>
         <form id="form">
             <input type="text" id="search" class="search" placeholder="Busca tu película favorita" />
@@ -68,13 +71,34 @@
     <h1>Todas las películas</h1>
     <div class="cards" id="cards"></div>
 
+    <div id="details-page"></div>
+
+    <div class="loading">
+      <div class="circle"></div>
+    </div>
+
     <template id="template-card">
         <div class="card-section">
             <div class="card" id="card">
-                <a><img src=${image} class="card-image" data-id=${id}></a>
+                <a><img src="" class="card-image" ></a>
+                <span id="vote" class=""></span>
+                <img id="star" src="./images/Icon.svg" alt="">
             </div>
         </div>
     </template>
+
+    <template id="template-details">
+      <div id="card-detail">
+        <button id="close-detail" type="button">X</button>
+        <img src="" alt="" id="card-img" />
+        <div id="card-body">
+          <p id="card-title"></p>
+          <p id="card-description"></p>
+          <p id="card-categories"></p>
+        </div>
+      </div>
+    </template>
+
 
     <script src="./script.js"></script>
 </body>

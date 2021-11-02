@@ -1,0 +1,16 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Jeisson",
+      "apellido": "Villamarin",
+      "correo": "jeisson@gmail.com"
+    },
+    {
+      "nombre": "Lauris vanessa",
+      "apellido": "Mora leon",
+      "correo": "laurisvanessa.m@gmail.com",
+      "id": 2
+    }
+  ]
+}

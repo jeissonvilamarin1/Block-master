@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Block Master - Register</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="logo">
+                <a href="#"><img src="./images/Block master.png" alt="logo peliculas para ti" /></a>
+            </ul>
+            <ul class="register">
+                <a href="index.html">Todas</a>
+            </ul>
+            <ul class="register">
+                <a href="" id="register-btn">Más valoradas</a>
+            </ul>
+            <ul class="register">
+                <a href="#" id="register-btn">Menos valoradas</a>
+            </ul>
+            <ul class="register">
+                <a href="form.html" id="register-btn">Regístrate</a>
+            </ul>
+            <form id="form">
+                <input type="text" id="search" class="search" placeholder="Busca tu película favorita" />
+                <button id="btnBuscar" type="submit">Buscar</button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="slider-container">
+        <ul class="slider" id="slider">
+            <li id="slide1" class="slider-section">
+                <img src="./images/shang-chi.jpg" alt="shang chi movie" class="slider-img" />
+            </li>
+            <li id="slide2" class="slider-section">
+                <img src="./images/black-widow.jpg" alt="black widow movie" class="slider-img" />
+            </li>
+            <li id="slide3" class="slider-section">
+                <img src="./images/spiderman.jpg" alt="spiderman movie" class="slider-img" />
+            </li>
+        </ul>
+        <br />
+        <div id="slider-btn-container">
+            <a class="slider-btn" href="#slide1"></a>
+            <a class="slider-btn" href="#slide2"></a>
+            <a class="slider-btn" href="#slide3"></a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Formulario de regístro</h2>
+        <form id="formulario">
+            <div class="campo">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" >
+            </div>
+            <div class="campo">
+                <label for="lastName">Apellido</label>
+                <input id="lastName" name="lastName" type="text">
+            </div>
+            <div class="campo">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+            </div>
+            <div class="campoId">
+                <label for="id">Id</label>
+                <input id="id" name="id" type="text">
+            </div>
+            <div class="">
+                <button id="btnGuardar" type="submit" class="form-btn">Guardar</button>
+            </div>
+            <div class="">
+                <button id="btnCorreo" type="button" class="form-btn">Buscar por correo</button>
+            </div>
+            <div class="">
+                <button id="btnEditar" type="button" class="form-btn">Editar</button>
+            </div>
+            <div class="">
+                <button id="btnEliminar" type="button" class="form-btn">Eliminar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./form.js"></script>
+</body>
+
+</html>
