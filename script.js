@@ -3,7 +3,7 @@ const API_URL =
 const IMG_PATH = `https://image.tmdb.org/t/p/w1280`;
 const URL_TOPRATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=3fd2be6f0c70a2a598f084ddfb75487c&language=en-US&page=1`;
 const SEARCH_URL =
-  "http://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=";
+  "https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=";
 const URL_VIDEOS = `https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=3fd2be6f0c70a2a598f084ddfb75487c&language=en-US`;
 const URL_POPULAR = `https://api.themoviedb.org/3/movie/upcoming?api_key=3fd2be6f0c70a2a598f084ddfb75487c&language=en-US&page=1`;
 
@@ -51,7 +51,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const searchTerm = search.value;
-  if (searchTerm) {
+  if(searchTerm){
     await getMovies(SEARCH_URL + searchTerm);
     search.value = "";
   }
