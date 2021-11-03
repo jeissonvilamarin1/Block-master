@@ -331,7 +331,7 @@ height: 300px;
     color: white;
 }
 .show{
-  display: none;
+  display: flex;
 }
 
 
@@ -361,4 +361,23 @@ height: 300px;
 @keyframes spin {
   0% { transform: rotate(0deg)}
   100% { transform: rotate(360deg)}
+}
+
+.btns-nav{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+#trailer{
+  overflow-x: none;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.video{
+  margin-right: 1em;
+  display: inline-block;
+  width: 500px;
 }

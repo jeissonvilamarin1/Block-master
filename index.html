@@ -21,10 +21,10 @@
           <a href="index.html">Todas</a>
         </ul>
         <ul class="register">
-          <a href="" id="register-btn">Más <br>valoradas</a>
+          <button type="button" id="top-rated" class="btns-nav">Más <br>valoradas</button>
         </ul>
         <ul class="register">
-          <a href="#" id="register-btn">Menos <br>valoradas</a>
+          <button type="button" id="popular" class="btns-nav">Más <br>populares</button>
         </ul>
         <ul class="register">
           <a href="form.html" id="register-btn">Regístrate</a>
@@ -39,11 +39,7 @@
     <div class="slider-container">
       <ul class="slider" id="slider">
         <li id="slide1" class="slider-section">
-          <img
-            src="./images/shang-chi.jpg"
-            alt="shang chi movie"
-            class="slider-img"
-          />
+          <img src="./images/shang-chi.jpg" alt="black widow movie" class="slider-img" />
         </li>
         <li id="slide2" class="slider-section">
           <img
@@ -67,8 +63,8 @@
         <a class="slider-btn" href="#slide3"></a>
       </div>
     </div>
-
-    <h1>Todas las películas</h1>
+    <div id="trailer"></div>
+    <h1 id="heading">Todas las películas</h1>
     <div class="cards" id="cards"></div>
 
     <div id="details-page"></div>
@@ -89,12 +85,13 @@
 
     <template id="template-details">
       <div id="card-detail">
-        <button id="close-detail" type="button">X</button>
+        <a id="close-detail" type="button" href="./index.html">X</a>
         <img src="" alt="" id="card-img" />
         <div id="card-body">
           <p id="card-title"></p>
           <p id="card-description"></p>
           <p id="card-categories"></p>
+        <div id="trailer"></div>
         </div>
       </div>
     </template>
